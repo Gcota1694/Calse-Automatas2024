@@ -1,0 +1,38 @@
+### Informe de Progreso y Planificación de Proyecto
+
+#### Funcionalidades Actuales del Programa Evaluador de Archivos JSON 
+
+Este documento detalla las funcionalidades actuales de nuestro programa evaluador de archivos JSON, así como las posibles actualizaciones y proyecciones del proyecto.
+
+#### Funcionalidades del Programa 
+
+Hasta la fecha, nuestro programa realiza las siguientes tareas:
+
+1. **Lectura de Archivos**: Lee un archivo JSON externo.
+2. **Asignación de Tokens**: Genera una lista de cada carácter del archivo, asignándole su respectivo token en valor unicode.
+3. **Validación de JSON**: Verifica si el archivo JSON es válido, comprobando que el primer token sea `{`. Si no es así, el programa se detiene y muestra un mensaje de error.
+4. **Verificación de Cierres**: Asegura que las comillas dobles iniciales tengan su correspondiente cierre, y en caso contrario, emite una alerta.
+5. **Identificación de Cadenas**: Si un elemento es una cadena ('string'), le asigna el token 200.
+6. **Identificación de Números**: Si un elemento es un número, asigna el token 201 si es entero, y el token 202 si es flotante.
+7. **Validación de Fechas**: Si un elemento cumple con el formato de tipo 'date', se le asigna el token 203.
+
+#### Funcionalidades Pendientes 
+
+El programa está en desarrollo y necesita incluir las siguientes funcionalidades:
+
+1. **Validación de Fechas**: Confirmar que el formato de fecha sea válido.
+2. **Validación de Flotantes**: Asegurar que los elementos de tipo flotante solo contengan un punto decimal.
+3. **Verificación de Llaves de Cierre**: Evaluar la presencia de una llave de cierre `}`.
+4. **Validación de Estructura**: Confirmar que después de `:` siga un elemento de tipo cadena, numérico, arreglo u objeto.
+5. **Evaluación de Tipos de Datos**: Analizar los tipos de datos asignados por el programador.
+6. **Validación de Caracteres Especiales**: Asignar validaciones específicas para caracteres especiales.
+7. **Validación de Espacios e Identación**: Verificar espacios e identaciones dentro del archivo JSON.
+8. **Formateador de Sintaxis**: Implementar un formateador para mejorar la sintaxis JSON.
+
+#### Proyecciones y Alcance del Proyecto 
+
+Actualmente, el programa actúa principalmente como un evaluador léxico de archivos JSON. En el futuro, sería beneficioso e interesante expandir sus capacidades para incluir análisis sintáctico y semántico. 
+
+El objetivo es convertir nuestro evaluador en una herramienta tipo *linter*, que ayude en la creación y validación de archivos JSON. Dado que el formato JSON es ampliamente utilizado en diversas aplicaciones, esta herramienta sería extremadamente útil.
+
+Aspiramos a que en futuras actualizaciones, el programa alcance este objetivo, ofreciendo una aplicación de alta calidad para todos los usuarios.
